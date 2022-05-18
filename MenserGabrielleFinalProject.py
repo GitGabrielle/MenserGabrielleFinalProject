@@ -3,7 +3,7 @@
 # pip install pillow
 
 from tkinter import *
-from PIL import ImageTk, Image
+from PIL import Image, ImageTk
 
 # Main Window(1)
 
@@ -17,6 +17,11 @@ img = Image.open("C:/Users/gmenser1/Pictures/IMG1.png")
 photo = ImageTk.PhotoImage(img)
 lab = Label(image=photo)
 lab.pack()
+
+# Image2
+bg = PhotoImage(file="C:/Users/gmenser1/Pictures/BadHabit.png")
+mylabel = Label(window, image=bg)
+mylabel.place(x=200, y=150, width=150, height=150)
 
 # Window1 Label(1)
 
@@ -94,6 +99,8 @@ def third_win():
 
     button3 = Button(window, text="Goodbye!", fg='white', bg="black", relief=RAISED, command=exit1, font=("arial", 12, "bold"))
     button3.place(x=100, y=100)
+
+
 
 
 window.mainloop()
